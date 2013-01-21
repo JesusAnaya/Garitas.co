@@ -1,0 +1,127 @@
+﻿<!doctype html>
+<html class="no-js" lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Garita {{city.mx_city}} | Reporte del tiempo de espera en garitas.co</title>
+	<meta name="description" content="Reporte del tiempo de espera de Garita {{ city.mx_city }} | Tipo de Cambio y  Reporte del Clima">
+		<!-- Facebook -->
+	<meta property="og:title" content="garitas.co"/>
+	<meta property="og:type" content="company"/>
+	<meta property="og:url" content="https://garitas.co/"/>
+	<meta property="og:image" content="/static/img/garitas-fb.jpg"/>
+	<meta property="og:site_name" content="garitas"/>
+	<meta property="fb:admins" content="huleos"/>
+	<meta property="og:description" content="Reporte del tiempo de espera de las garitas fronterizas Mexico - USA, desde Tijuana hasta Matamoros"/>
+	<!-- /Facebook -->
+
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/static/css/style.css">
+	<link rel="stylesheet" href="/static/css/cities_list.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/script.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			// get shells each 5 minutes
+			getShells(5, {{city_id}});
+
+			// init clock data
+			datatime();
+
+			$('#box_popup').hide();
+		});
+	</script>
+	<script type="text/javascript">
+		  window.___gcfg = {lang: 'es-419'};
+
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+	</script>
+</head>
+<body>
+	<header id="header">
+		<div id="header-wrap">
+			<h1 id="logo">
+				<a href="https://garitas.co/facebook/">Garitas.co | Reporte del tiempo de espera de garita fronteriza {{city.mx_city}}</a>
+			</h1>
+			<h3 id="change-city"><a class="button-red bg-overlay" onclick="selectCity();">Selecciona tu Ciudad</a></h3>
+		</div>
+	</header>
+	<div id="wrap">
+		<!-- wrap-top -->
+		<h2 id="city">{{city.mx_city}}</h2>
+			<ul id="social-media">
+				<!-- Facebook -->
+				<li id="fb-button">
+			<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/garitasmexico&amp;send=true&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=44" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150x; height:44px;" allowTransparency="true" rel="nofollow"></iframe>
+			</li>
+				<!-- Twitter -->
+				<li id="twitter-button">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://garitas.co/" data-text="garita.co - Conoce el tiempo de garitas en Mexico" data-count="horizontal" data-via="686studio">Tweet</a><script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script></script>
+				</li>
+				<!-- g+ -->
+				<div id="g-button">
+					<g:plusone size="medium" href="http://garitas.co/"></g:plusone>
+				</div>
+			</ul>
+		<!-- /wrap-top -->
+		<div id="border-ports">
+			<p style="width:640px;height:200px;"><p>
+			<img src="/static/img/ajax-loader.gif" width="300" height="20"> Cargando...
+		</div>
+		<section class="adds">
+			<div id="ad300">
+				<!-- Begin Ad Call Tag - Do not Modify -->
+				<iframe width='300' height='250' frameborder='no' framespacing='0' scrolling='no' src='//ads.lfstmedia.com/slot/slot45589?ad_size=300x250&adkey=b90'></iframe>
+				<!-- End of Ad Call Tag -->
+			</div>
+			<div class="divider-space"></div>
+			<div id="ad300">
+				<!-- Begin Ad Call Tag - Do not Modify -->
+				<iframe width='300' height='250' frameborder='no' framespacing='0' scrolling='no' src='//ads.lfstmedia.com/slot/slot45590?ad_size=300x250&adkey=7cf'></iframe>
+				<!-- End of Ad Call Tag -->
+			</div>
+			<div id="ad728">
+				<!-- Begin Ad Call Tag - Do not Modify -->
+				<iframe width='728' height='90' frameborder='no' framespacing='0' scrolling='no' src='//ads.lfstmedia.com/slot/slot45591?ad_size=728x90&adkey=1c7'></iframe>
+				<!-- End of Ad Call Tag -->
+			</div>
+			<p id="service">Made in <a href="https://686studio.com"><strong>686studio.com</strong></a> @ 2012 Garitas.co </p>
+		</section>
+		<div class="box" id="box_popup">
+			<!-- <a class="boxclose" id="boxclose_popup"></a> -->
+			<h3 id="title-list" class="bg-overlay">Selecciona tu Ciudad <img src="/static/img/close.png" onclick="closeSelectCity();" style="float:right;z-index:20;cursor:pointer;"></h3>
+			<ul class="city-tabs" id="city-tabs">
+				{% for city in cities %}
+					<li class="bg-overlay">
+						<h2><a href="/facebook/{{city.alias}}" onclick="">{{city.city}} - {{city.state}}</a></h2>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+  <footer>
+
+  </footer>
+  <!-- Google Anaytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33383897-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

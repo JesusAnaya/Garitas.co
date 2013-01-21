@@ -1,0 +1,52 @@
+<section class="shell">
+    <div class="shell-box">
+        <div class="name-tab bg-overlay">
+                    <h2 class="name">{{ port.mx_alias }}</h2>
+                    <!-- <p class="last-update">Ultima actulización 8:02pm</p> -->
+                </div>
+
+        <!-- Vehicle Standard -->
+        <div class="lane-box">
+            <div class="lane bg-overlay" style="background-color:#{{port.vehicle_standard_lane.color}}">
+                <h2>standard</h2>
+                <div class="vehicle"></div>
+            </div>
+            <div class="wait bg-overlay">
+                <p>{{port.vehicle_standard_lane.hours}}:{{port.vehicle_standard_lane.mins}}<span>{{port.vehicle_standard_lane.time_text}}<span></p>
+            </div>
+        </div>
+
+        <!-- Vehicle Sentri -->
+        <div class="lane-box">
+            <div class="lane bg-overlay" style="background-color:#{{port.vehicle_sentri_lane.color}}">
+                <h2>sentri</h2>
+                <div class="vehicle"></div>
+            </div>
+            <div class="wait bg-overlay">
+                <p>{{port.vehicle_sentri_lane.hours}}:{{port.vehicle_sentri_lane.mins}}<span>{{port.vehicle_sentri_lane.time_text}}<span></p>
+            </div>
+        </div>
+
+        <!-- Vehicle readylane -->
+        <div class="lane-box">
+            <div class="lane bg-overlay" style="background-color:#{{port.vehicle_ready_lane.color}}">
+                <h2>readylane</h2>
+                <div class="vehicle"></div>
+            </div>
+            <div class="wait bg-overlay">
+                <p>{{port.vehicle_ready_lane.hours}}:{{port.vehicle_ready_lane.mins}}<span>{{port.vehicle_ready_lane.time_text}}<span></p>
+            </div>
+        </div>
+
+        <!-- People Standard -->
+        <div class="lane-box">
+            <div class="lane bg-overlay" style="background-color:#{{port.pedestrian_standard_lanes.color}}">
+                <h2>standard</h2>
+                <div class="person"></div>
+            </div>
+            <div class="wait bg-overlay last-lane">
+                <p>{{port.pedestrian_standard_lanes.hours}}:{{port.pedestrian_standard_lanes.mins}}<span>{{port.pedestrian_standard_lanes.time_text}}<span></p>
+            </div>
+        </div>
+    </div>
+</section>

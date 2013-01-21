@@ -1,0 +1,9 @@
+# www.robotstxt.org/
+# http://code.google.com/web/controlcrawlindex/
+
+User-agent: *
+sitemap: http://www.garitas.co/sitemap.xml
+Disallow: /get_shells/
+Disallow: /static/css/
+Disallow: /admin/
+Disallow: /garitasadmin/

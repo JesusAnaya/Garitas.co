@@ -1,0 +1,4 @@
+django==1.4
+django-grappelli==2.4
+mysql-python
+django-jstemplate
