@@ -125,9 +125,9 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'jstemplate',
     'api',
     'garitas',
+    'jstemplate'
 )
 
 # A sample logging configuration. The only tangible logging
@@ -161,3 +161,5 @@ LOGGING = {
 
 USE_X_FORWARDED_HOST = True
 GRAPPELLI_ADMIN_TITLE = "Garitas Control Panel"
+
+JSTEMPLATE_DIRS = os.path.join(os.path.dirname(__file__), "../garitas/jstemplates")

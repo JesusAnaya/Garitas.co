@@ -9,6 +9,9 @@ class Geolocal():
     def get_border_codes(self, city_id):
         return Border.get_border_codes(city_id)
 
+    def get_border_codes_by_coords(self, latitude, longitude):
+        return self.__get_id_city_by_coords((latitude, longitude), Border.get_coords())
+
     """
     function get_city_id: return the city id from your position using your ip address
 
