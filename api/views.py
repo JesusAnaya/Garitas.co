@@ -22,4 +22,7 @@ def get_by_coords(request):
             city_id = geolocal.get_border_codes_by_coords(lat, lon)
             result = map(lambda code: borderdata.get_data_by_port(code),
                 geolocal.get_border_codes(city_id))
-    return HttpResponse(json_dumps(result), mimetype='application/json')
+    return HttpResponse(json_dumps({
+            'city_name': borderdata.get_city_name(city_id),
+            'borders': result
+        }), mimetype='application/json')
