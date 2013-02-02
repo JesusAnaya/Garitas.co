@@ -952,3 +952,33 @@ input.submit{
 	text-transform: uppercase;
 	display: inline-block;
 }
+
+
+
+/************************
+Feedback
+*************************/
+
+.feedback h2{
+	font-weight: normal;
+	font-size: 24px;
+	margin: 0;
+}
+
+.feedback p{
+	font-size: 14px;
+}
+
+.feedback input{
+	width: 368px;
+	padding: 5px;
+	margin-top: 5px;
+	border-radius: 3px;
+	background: #f2f2f2;
+	outline: none;
+	border: 1px solid #b3b3b3;
+}
+
+.feedback input:focus{
+	border: 1px solid #33CCCC;
+}

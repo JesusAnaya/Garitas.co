@@ -139,7 +139,7 @@
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 		</div>
-			<p id="service">Made in <a href="http://686studio.com"><strong>686studio.com</strong></a> @ 2012 Garitas.co </p>
+			<p id="service">Made in <a href="http://686studio.com"><strong>686studio.com</strong></a> &copy; 2012 Garitas.co </p>
 		</section>
 		<div class="box" id="box_popup">
 			<!-- <a class="boxclose" id="boxclose_popup"></a> -->
@@ -151,6 +151,41 @@
 					</li>
 				{% endfor %}
 			</ul>
+		</div>
+
+		<div class="feedback">
+      <h2>Contactanos</h2>
+			<form action="" method="post" id="contact_form">
+                  <!-- Name -->
+                  <p>
+                    <label>Nombre</label><input type="text" name="name" minlength="2" class="required">
+                  </p>
+                  <!-- Email -->
+                  <p>
+                    <label>Email</label><input type="text" name="email" class="required email">
+                  </p>
+                  <!-- Where -->
+                  <p>
+                    <label>Teléfono</label><input type="text" name="where" minlength="2">
+                  </p>
+                  <!-- Gender -->
+                  <p>
+                    <label>Asunto</label>
+                    <select name="subject" size="1">
+                      <option value="" selected="selected"> -- </option>
+                      <option value="Feedback">Feedback</option>
+                      <option value="Publicarme">Publicarme</option>
+                      <option value="Saludar">Saludar</option>
+                    </select>
+                  </p>
+                  <!-- Message -->
+                  <p>
+                   <label>Your Message</label><textarea name="message" minlength="10" class="required"></textarea>
+                  </p>
+
+                  <button type="submit" class="radius button">Send Mail</button>
+                </form>
+
 		</div>
 	</div>
   <footer>
