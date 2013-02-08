@@ -958,9 +958,23 @@ input.submit{
 /************************
 Feedback
 *************************/
+.feedback{
+	width: 300px;
+position: fixed;
+top: 10%;
+left: 50%;
+margin-left: -150px;
+background-color: #fff;
+color: #7F7F7F;
+padding: 20px;
+border: 1px solid #b3b3b3;
+border-radius: 5px;
+box-shadow: 0 5px 10px rgba(0,0,0,.5);
+z-index: 9999;
+}
 
 .feedback h2{
-	font-weight: normal;
+	font-weight: 300;
 	font-size: 24px;
 	margin: 0;
 }
@@ -969,8 +983,8 @@ Feedback
 	font-size: 14px;
 }
 
-.feedback input{
-	width: 368px;
+.feedback input, .feedback textarea{
+	width: 96%;
 	padding: 5px;
 	margin-top: 5px;
 	border-radius: 3px;
@@ -979,6 +993,88 @@ Feedback
 	border: 1px solid #b3b3b3;
 }
 
-.feedback input:focus{
+.feedback textarea{
+	min-height: 100px;
+}
+
+.feedback select{
+width: 98%;
+padding: 5px;
+margin-top: 5px;
+border-radius: 3px;
+background: #f2f2f2;
+outline: none;
+border: 1px solid #b3b3b3;
+}
+
+
+
+.feedback input:focus, .feedback textarea:focus{
 	border: 1px solid #33CCCC;
+}
+
+.button-send{
+font-family: 'Dosis', sans-serif;
+font-weight: normal;
+padding: 10px 0;
+font-size: 1.2rem;
+width: 100%;
+text-decoration: none;
+color: #fff;
+text-align: center;
+text-transform: uppercase;
+display: inline-block;
+border-radius: 3px;
+webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+background-color: #33CCCC;
+border: 1px solid #00AAA1;
+-webkit-transition: background 0.2s ease-in-out;
+-moz-transition: background 0.2s ease-in-out;
+-ms-transition: background 0.2s ease-in-out;
+-o-transition: background 0.2s ease-in-out;
+transition: background 0.2s ease-in-out;
+}
+
+.button-send:hover{
+background: #Ff6666;
+border: 1px solid #FF3333;
+}
+
+#feedback-tab {
+background-color: #Ff6666;
+border: 1px solid #FF3333;
+position: fixed;
+left: -32px;
+top: 150px;
+-moz-transform: rotate(-90deg);
+-webkit-transform: rotate(-90deg);
+-o-transform: rotate(-90deg);
+-ms-transform: rotate(-90deg);
+transform: rotate(-90deg);
+-webkit-border-radius: 0px 0px 5px 5px;
+border-radius: 0px 0px 5px 5px;
+z-index: 99999999;
+}
+
+#feedback-tab a {
+color: #fff;
+font-family: 'Dosis', Helvetica, Arial, Sans-Serif;
+font-size: 1.2rem;
+display: block;
+padding: 4px 14px;
+text-decoration: none;
+}
+
+#feedback-tab:hover {
+border: 1px solid #00AAA1;
+background-color: #33CCCC;
+}
+
+.btn-closed{
+	z-index: 20;
+cursor: pointer;
+position: absolute;
+right: -20px;
+top: -20px;
 }

@@ -4,11 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	{% if city.mx_city != -1 %}
-	<title>Garita {{city.mx_city}} | Reporte del tiempo de espera en garitas.co</title>
+	<title>Garita {{city.mx_city}} | Revisa aqui el tiempo de garitas ya!</title>
 	{% else %}
-	<title>Garitas.co Reporte del tiempo de espera en garitas.co</title>
+	<title>Garitas Mexico | USA Revisa aqui el tiempo de garitas ya!</title>
 	{% endif %}
-	<meta name="description" content="Reporte del tiempo de espera de Garita {{ city.mx_city }} | Tipo de Cambio y  Reporte del Clima">
+	<meta name="description" content="Reporte del tiempo de espera de Garita {{ city.mx_city }} y todas las garitas Mexico | USA al instante">
 		<!-- Facebook -->
 	<meta property="og:title" content="garitas.co"/>
 	<meta property="og:type" content="company"/>
@@ -85,7 +85,7 @@
 			<p style="width:640px;height:200px;"><p>
 			<img src="/static/garitas/img/ajax-loader.gif" width="300" height="20"> Cargando...
 		</div>
-		<section class="adds">
+		<aside class="adds">
 			<div id="ad300">
 				<script type="text/javascript"><!--
 				google_ad_client = "ca-pub-0248888696672038";
@@ -139,11 +139,11 @@
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 		</div>
-			<p id="service">Made in <a href="http://686studio.com"><strong>686studio.com</strong></a> &copy; 2012 Garitas.co </p>
-		</section>
+			<p id="service">Made in <a href="http://686studio.com"><strong>686studio.com</strong></a> &copy; 2013 Garitas.co </p>
+		</aside>
 		<div class="box" id="box_popup">
 			<!-- <a class="boxclose" id="boxclose_popup"></a> -->
-			<h3 id="title-list" class="bg-overlay">Selecciona tu Ciudad <img src="/static/garitas/img/close.png" onclick="closeSelectCity();" style="float:right;z-index:20;cursor:pointer;"></h3>
+			<h3 id="title-list" class="bg-overlay">Selecciona tu Ciudad <img class="btn-closed" src="/static/garitas/img/close.png" onclick="closeSelectCity();"></h3>
 			<ul class="city-tabs" id="city-tabs">
 				{% for city in cities %}
 					<li class="bg-overlay">
@@ -153,41 +153,47 @@
 			</ul>
 		</div>
 
-		<div class="feedback">
-      <h2>Contactanos</h2>
+    <!-- Feedback -->
+		<div class="feedback" id="box_popup">
+      <img class="btn-closed" src="/static/garitas/img/close.png">
+      <h2>Contáctanos</h2>
 			<form action="" method="post" id="contact_form">
-                  <!-- Name -->
-                  <p>
-                    <label>Nombre</label><input type="text" name="name" minlength="2" class="required">
-                  </p>
-                  <!-- Email -->
-                  <p>
-                    <label>Email</label><input type="text" name="email" class="required email">
-                  </p>
-                  <!-- Where -->
-                  <p>
-                    <label>Teléfono</label><input type="text" name="where" minlength="2">
-                  </p>
-                  <!-- Gender -->
-                  <p>
-                    <label>Asunto</label>
-                    <select name="subject" size="1">
-                      <option value="" selected="selected"> -- </option>
-                      <option value="Feedback">Feedback</option>
-                      <option value="Publicarme">Publicarme</option>
-                      <option value="Saludar">Saludar</option>
-                    </select>
-                  </p>
-                  <!-- Message -->
-                  <p>
-                   <label>Your Message</label><textarea name="message" minlength="10" class="required"></textarea>
-                  </p>
-
-                  <button type="submit" class="radius button">Send Mail</button>
-                </form>
-
-		</div>
+        <!-- Name -->
+        <p>
+          <label>Nombre</label><input type="text" name="name" minlength="2" class="required">
+        </p>
+        <!-- Email -->
+        <p>
+          <label>Email</label><input type="text" name="email" class="required email">
+        </p>
+        <!-- Where -->
+        <p>
+          <label>Teléfono</label><input type="text" name="where" minlength="2">
+        </p>
+        <!-- subject -->
+        <p>
+          <label>Asunto</label>
+          <select name="subject" size="1">
+            <option value="" selected="selected"> -- </option>
+            <option value="Feedback">Feedback</option>
+            <option value="Publicarme">Publicarme</option>
+            <option value="Saludar">Saludar</option>
+          </select>
+        </p>
+        <!-- Message -->
+        <p>
+         <label>Your Message</label><textarea name="message" minlength="10" class="required"></textarea>
+        </p>
+        <button type="submit" class="button-send">Send Mail</button>
+      </form>
+    </div>
+    <!-- /Feedback -->
 	</div>
+      <!-- button feedback -->
+    <div id="feedback-tab">
+      <a href="/" onclick="Feedback();">Feedback</a>
+    </div>
+    <!-- /button feedback -->
   <footer>
   </footer>
   <!-- Google Anaytics -->
