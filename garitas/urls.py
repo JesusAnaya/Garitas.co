@@ -4,7 +4,6 @@ from garitas import sitemap
 
 urlpatterns = patterns('',
     url(r'^$', 'garitas.views.home', name='home'),
-    url(r'^get_shells/', 'garitas.views.get_shells', name='get_shells'),
     url(r'^whatismyip/$', 'garitas.views.what_is_my_ip', name='whatismyip'),
     url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {
         'sitemaps': {
