@@ -1,6 +1,4 @@
 $(document).on('ready', function(){
-    $('#box_popup').hide();
-
     /*
      * Models
      */

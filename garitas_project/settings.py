@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    ('Jesus Anaya', 'jesus.anaya@arkilabs.com'),
+    ('Jesus Anaya', 'jesus.anaya.dev@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -163,3 +163,10 @@ USE_X_FORWARDED_HOST = True
 GRAPPELLI_ADMIN_TITLE = "Garitas Control Panel"
 
 JSTEMPLATE_DIRS = os.path.join(os.path.dirname(__file__), "../garitas/jstemplates")
+
+EMAI_CONTACT = ["creativo@686studio.com", "jesus.anaya.dev@gmail.com"]
+
+try:
+    from server_settings import *
+except:
+    print "run in local"

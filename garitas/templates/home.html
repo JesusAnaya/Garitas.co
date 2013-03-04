@@ -27,7 +27,9 @@
 	<link rel="stylesheet" href="/static/garitas/css/cities_list.css">
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-	<script src="/static/garitas/js/jquery.min.js"></script>
+    <script src="/static/garitas/js/jquery.min.js"></script>
+    <script src="/static/garitas/js/jquery.form.js"></script>
+	<script src="/static/garitas/js/jquery.validate.js"></script>
 	<script src="/static/garitas/js/underscore-min.js"></script>
 	<script src="/static/garitas/js/backbone-min.js"></script>
 	<script src="/static/garitas/js/mustache.js"></script>
@@ -154,10 +156,13 @@
 		</div>
 
     <!-- Feedback -->
-		<div class="feedback" id="box_popup">
-      <img class="btn-closed" src="/static/garitas/img/close.png">
+	<div class="feedback" id="box_popup">
+      <a href="#!" onclick="closeFeedback();">
+        <img class="btn-closed" src="/static/garitas/img/close.png">
+      </a>
       <h2>Contáctanos</h2>
-			<form action="" method="post" id="contact_form">
+        <img class="feedback-loading" src="/static/garitas/img/loading-gif.gif">
+		<form action="/send_email/" method="post" id="contact_form"> {% csrf_token %}
         <!-- Name -->
         <p>
           <label>Nombre</label><input type="text" name="name" minlength="2" class="required">
@@ -168,7 +173,7 @@
         </p>
         <!-- Where -->
         <p>
-          <label>Teléfono</label><input type="text" name="where" minlength="2">
+          <label>Teléfono</label><input type="text" name="tel" minlength="2">
         </p>
         <!-- subject -->
         <p>
@@ -182,7 +187,8 @@
         </p>
         <!-- Message -->
         <p>
-         <label>Your Message</label><textarea name="message" minlength="10" class="required"></textarea>
+         <label>Your Message</label>
+         <textarea name="message" minlength="10" class="required"></textarea>
         </p>
         <button type="submit" class="button-send">Send Mail</button>
       </form>
@@ -191,7 +197,7 @@
 	</div>
       <!-- button feedback -->
     <div id="feedback-tab">
-      <a href="/" onclick="Feedback();">Feedback</a>
+      <a href="#!" onclick="feedback();">Feedback</a>
     </div>
     <!-- /button feedback -->
   <footer>
@@ -208,6 +214,9 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+  $('#box_popup').hide();
+  $('.feedback').hide();
 
 </script>
 </body>

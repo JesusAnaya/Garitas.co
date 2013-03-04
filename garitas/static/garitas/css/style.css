@@ -73,7 +73,7 @@ td { vertical-align: top; }
 
 
 @media only screen and (min-width: 35em) {
-  
+
 
 }
 
@@ -96,7 +96,7 @@ td { vertical-align: top; }
 	text-shadow: none !important;
 	filter:none !important;
 	-ms-filter: none !important;
-} 
+}
 a, a:visited {
 	text-decoration: underline;
 }
@@ -111,7 +111,7 @@ abbr[title]:after {
 
 .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
 	content: "";
-} 
+}
 
 pre, blockquote {
 	border: 1px solid #999;
@@ -120,7 +120,7 @@ pre, blockquote {
 
 thead {
 	display: table-header-group;
-} 
+}
 
 tr, img {
 	page-break-inside: avoid;
@@ -224,7 +224,7 @@ h3#change-city{
 	-o-transition:      all 0.2s ease-in-out;
 	transition:         all 0.2s ease-in-out;
 }
-	
+
 .button-red:hover{
 	background: #Ff6666;
 	border: 1px solid #FF3333;
@@ -246,7 +246,7 @@ h3#change-city{
 	-o-transition:      all 0.2s ease-in-out;
 	transition:         all 0.2s ease-in-out;
 }
-	
+
 .button-green:hover{
 	background: #33CCCC;
 	border: 1px solid #00AAA1;
@@ -544,7 +544,7 @@ ul#extra{
 	-ms-transition: color 0.3s ease-in-out;
 	-o-transition: color 0.3s ease-in-out;
 	transition: color 0.3s ease-in-out;
-	
+
 }
 
 #service a:hover {
@@ -912,7 +912,7 @@ input.button-green{
 	-o-transition:      all 0.2s ease-in-out;
 	transition:         all 0.2s ease-in-out;
 }
-	
+
 input.button-green:hover{
 	background: #33CCCC;
 	border: 1px solid #00AAA1;
@@ -934,7 +934,7 @@ input.button-gray{
 	-o-transition:      all 0.2s ease-in-out;
 	transition:         all 0.2s ease-in-out;
 }
-	
+
 input.button-gray:hover{
 	background: #b2b2b2;
 	border: 1px solid #a1a1a1;
@@ -953,24 +953,30 @@ input.submit{
 	display: inline-block;
 }
 
-
-
 /************************
 Feedback
 *************************/
+.feedback-loading{
+	margin-top: -60px;
+	margin-left: 250px;
+	z-index: 3;
+	position: relative;
+	visibility: hidden;
+}
+
 .feedback{
 	width: 300px;
-position: fixed;
-top: 10%;
-left: 50%;
-margin-left: -150px;
-background-color: #fff;
-color: #7F7F7F;
-padding: 20px;
-border: 1px solid #b3b3b3;
-border-radius: 5px;
-box-shadow: 0 5px 10px rgba(0,0,0,.5);
-z-index: 9999;
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	margin-left: -150px;
+	background-color: #fff;
+	color: #7F7F7F;
+	padding: 20px;
+	border: 1px solid #b3b3b3;
+	border-radius: 5px;
+	box-shadow: 0 5px 10px rgba(0,0,0,.5);
+	z-index: 9999;
 }
 
 .feedback h2{
