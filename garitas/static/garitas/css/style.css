@@ -508,7 +508,7 @@ ul#extra{
 	margin: 10px;
 }
 
-#ad300{
+.ad300{
 	float: left;
 	background: #f2f2f2;
 	width: 300px;
@@ -516,7 +516,7 @@ ul#extra{
 	margin: 0 10px;
 }
 
-#ad728, #ad320 {
+.ad728, .ad320 {
 	display: none;
 }
 
