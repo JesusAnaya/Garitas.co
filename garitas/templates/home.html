@@ -20,8 +20,8 @@
 	<meta name='border-model' content="/api/borders/{{city_id}}/" />
 	<!-- /Facebook -->
 
-	<meta name="robots" content="index, follow">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="canonical" href="http://garitas.co" />
 	<link rel="shortcut icon" href="/static/garitas/favicon.ico">
 	<link rel="stylesheet" href="/static/garitas/css/style.css">
 	<link rel="stylesheet" href="/static/garitas/css/cities_list.css">
@@ -71,11 +71,11 @@
 			<ul id="social-media">
 				<!-- Facebook -->
 				<li id="fb-button">
-			<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/garitasmexico&amp;send=true&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=44" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150x; height:44px;" allowTransparency="true" rel="nofollow"></iframe>
+			<iframe src="https://www.facebook.com/plugins/like.php?href=https://www.facebook.com/garitasmexico&amp;send=true&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=44" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150x; height:44px;" allowTransparency="true"></iframe>
 			</li>
 				<!-- Twitter -->
 				<li id="twitter-button">
-					<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://garitas.co" data-text="garita.co - Conoce el tiempo de garitas en Mexico" data-count="horizontal" data-via="686studio">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></script>
+					<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://garitas.co" data-text="garita.co - Conoce el tiempo de garitas en Mexico" data-count="horizontal" data-via="686studio">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 				</li>
 				<!-- g+ -->
 				<div id="g-button">
@@ -85,10 +85,10 @@
 		<!-- /wrap-top -->
 		<div id="border-ports">
 			<p style="width:640px;height:200px;"><p>
-			<img src="/static/garitas/img/ajax-loader.gif" width="300" height="20"> Cargando...
+			<img src="/static/garitas/img/ajax-loader.gif" width="300" height="20" alt="garitas-load"> Cargando...
 		</div>
 		<aside class="adds">
-            <div id="ad300">
+            <div class="ad300">
     			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="300" height="250">
                     <param name="movie" value="/static/garitas/flash/banner1.swf" />
                     <param name="quality" value="high" />
@@ -96,7 +96,7 @@
                 </object>
             </div>
 			<div class="divider-space"></div>
-			<div id="ad300">
+			<div class="ad300">
 				<script type="text/javascript"><!--
 				google_ad_client = "ca-pub-0248888696672038";
 				/* garitas.co II */
@@ -109,7 +109,7 @@
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				</script>
 			</div>
-			<div id="ad728">
+			<div class="ad728">
 			<script type="text/javascript"><!--
 				google_ad_client = "ca-pub-0248888696672038";
 				/* garitas 728 */
@@ -122,7 +122,7 @@
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</script>
 		</div>
-		<div id="ad320">
+		<div class="ad320">
 		<script type="text/javascript"><!--
 		google_ad_client = "ca-pub-0248888696672038";
 		/* Garitas Movil */
@@ -139,7 +139,7 @@
 		</aside>
 		<div class="box" id="box_popup">
 			<!-- <a class="boxclose" id="boxclose_popup"></a> -->
-			<h3 id="title-list" class="bg-overlay">Selecciona tu Ciudad <img class="btn-closed" src="/static/garitas/img/close.png" onclick="closeSelectCity();"></h3>
+			<h3 id="title-list" class="bg-overlay">Selecciona tu Ciudad <img class="btn-closed" src="/static/garitas/img/close.png" alt="close box" onclick="closeSelectCity();"></h3>
 			<ul class="city-tabs" id="city-tabs">
 				{% for city in cities %}
 					<li class="bg-overlay">
@@ -152,10 +152,10 @@
     <!-- Feedback -->
 	<div class="feedback" id="box_popup">
       <a href="#!" onclick="closeFeedback();">
-        <img class="btn-closed" src="/static/garitas/img/close.png">
+        <img class="btn-closed" src="/static/garitas/img/close.png" alt="close box">
       </a>
       <h2>Contáctanos</h2>
-        <img class="feedback-loading" src="/static/garitas/img/loading-gif.gif">
+        <img class="feedback-loading" src="/static/garitas/img/loading-gif.gif" al="loading">
 		<form action="/send_email/" method="post" id="contact_form"> {% csrf_token %}
         <!-- Name -->
         <p>
