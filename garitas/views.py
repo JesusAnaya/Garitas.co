@@ -17,7 +17,8 @@ def home(request, city=None):
     else:
         city_id = geolocal.get_city_id(request)
     city_info = borderdata.get_city_name(city_id)
-    cities = map(lambda city: {
+    cities = map(
+        lambda city: {
             'state': city.state,
             'city': city.name,
             'alias': city.link
@@ -39,7 +40,8 @@ def send_email(request):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
 
-        send_response_mail(settings.EMAI_CONTACT, 'Garitas - Feedback',
+        send_response_mail(
+            settings.EMAI_CONTACT, 'Garitas - Feedback',
             "emails/send_feedback.html", {
                 'name': name,
                 'email': email,
