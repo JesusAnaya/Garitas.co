@@ -1,3 +1,4 @@
+from django.contrib.gis.geoip import GeoIP
 from urllib2 import urlopen, HTTPError
 from models import Border
 from django.utils import simplejson
@@ -50,10 +51,14 @@ class Geolocal():
     def __get_current_coords(self, dir_ip):
         try:
             #get json array with all information about your IP Address and serialized to object
-            result = simplejson.loads(urlopen("http://api.easyjquery.com/ips/?ip=%s&full=true"\
-                % dir_ip).read())
+            #result = simplejson.loads(urlopen("http://api.easyjquery.com/ips/?ip=%s&full=true"\
+            #    % dir_ip).read())
             #create a tuple with current position usind the latitude and longitude values
-            return (result['CityLatitude'], result['CityLongitude'])
+            #return (result['CityLatitude'], result['CityLongitude'])
+
+            g = GeoIP()
+            result = g.city("%s" % dir_ip)
+            return (result['latitude'], result['longitude'])
         except HTTPError, e:
             print(e.code)
         return -1
