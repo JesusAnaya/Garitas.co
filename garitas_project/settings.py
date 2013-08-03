@@ -167,6 +167,6 @@ JSTEMPLATE_DIRS = os.path.join(os.path.dirname(__file__), "../garitas/jstemplate
 EMAI_CONTACT = ["creativo@686studio.com", "jesus.anaya.dev@gmail.com"]
 
 try:
-    from garitas_project.server_settings import *
-except:
+    from local_settings import *
+except ImportError:
     print "run in local"

@@ -1,4 +1,5 @@
-django==1.4
-django-grappelli==2.4
+django==1.5
+django-grappelli
 mysql-python
 django-jstemplate
+south
