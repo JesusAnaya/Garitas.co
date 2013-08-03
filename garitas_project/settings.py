@@ -112,6 +112,8 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+GEOIP_PATH = os.path.join(os.path.dirname(__file__), "../location")
+
 INSTALLED_APPS = (
     'grappelli',
     'django.contrib.auth',
